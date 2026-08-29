@@ -1,93 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Explore More - DataHuk</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-
-<style>
-body{
-margin:0;
-font-family:Poppins;
-background:radial-gradient(circle,#0f172a,#020617);
-color:white;
-overflow:hidden;
-}
-
-.back-btn{
-position:fixed;
-top:20px;
-left:20px;
-font-size:22px;
-text-decoration:none;
-color:#7b61ff;
-background:rgba(255,255,255,0.05);
-padding:10px 15px;
-border-radius:12px;
-border:1px solid rgba(255,255,255,0.1);
-}
-
-.container{
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-text-align:center;
-}
-
-h1{
-font-size:65px;
-background:linear-gradient(45deg,#00d5ff,#7b61ff);
--webkit-background-clip:text;
-color:transparent;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-margin-top:40px;
-width:80%;
-}
-
-.box{
-padding:25px;
-border-radius:20px;
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.1);
-transition:.3s;
-}
-
-.box:hover{
-transform:scale(1.05);
-border-color:#00d5ff;
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore More | DataHuk Innovations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<a class="back-btn" href="index.html">⬅ Home</a>
+  <nav class="navbar">
+    <a href="index.html" class="logo">Data<span>Huk</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="software.html">Software</a></li>
+      <li><a href="vision.html">Vision</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="policy.html">Policy</a></li>
+    </ul>
+  </nav>
 
-<div class="container">
+  <header class="page-header">
+    <h1>Explore More</h1>
+    <p>Discover the range of solutions we build.</p>
+  </header>
 
-<h1>Explore More</h1>
+  <section class="page-section">
+    <div class="cards-grid">
+      <div class="feature-card">
+        <div class="card-icon">⚡</div>
+        <h3>AI Automation Tools</h3>
+        <p>Smart workflows that save time and scale with your business.</p>
+      </div>
+      <div class="feature-card">
+        <div class="card-icon">📊</div>
+        <h3>Smart Dashboards</h3>
+        <p>Real-time analytics and beautiful data visualization.</p>
+      </div>
+      <div class="feature-card">
+        <div class="card-icon">📱</div>
+        <h3>Mobile Apps UI Kits</h3>
+        <p>Modern, clean interfaces ready for Android & iOS.</p>
+      </div>
+      <div class="feature-card">
+        <div class="card-icon">🌐</div>
+        <h3>SaaS Systems</h3>
+        <p>Full product platforms built for multi-tenant growth.</p>
+      </div>
+      <div class="feature-card">
+        <div class="card-icon">☁️</div>
+        <h3>Cloud Architecture</h3>
+        <p>Secure, scalable backends and deployment pipelines.</p>
+      </div>
+      <div class="feature-card">
+        <div class="card-icon">🎮</div>
+        <h3>Game Engines</h3>
+        <p>2D and multiplayer game experiences.</p>
+      </div>
+    </div>
+  </section>
 
-<div class="grid">
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">Data<span>Huk</span></div>
+        <p>Innovate • Build • Transform</p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="software.html">Software</a>
+        <a href="contact.html">Contact</a>
+        <a href="policy.html">Policy</a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 DataHuk Innovations. All rights reserved.</p>
+  </footer>
 
-<div class="box">⚡ AI Automation Tools</div>
-<div class="box">📊 Smart Dashboards</div>
-<div class="box">📱 Mobile Apps UI Kits</div>
-<div class="box">🌐 SaaS Systems</div>
-<div class="box">☁ Cloud Architecture</div>
-<div class="box">🎮 Game Engines</div>
-
-</div>
-
-</div>
-
+  <script src="script.js"></script>
 </body>
 </html>
