@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Apps | DataHuk Innovations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .app-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2.2rem 1.8rem;
+      border: 1px solid #eee;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .app-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(168,85,247,0.08));
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .app-card:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 22px 45px rgba(99,102,241,0.18);
+    }
+
+    .app-card:hover::before {
+      opacity: 1;
+    }
+
+    .app-icon {
+      font-size: 3rem;
+      margin-bottom: 1.2rem;
+      display: inline-block;
+      animation: float 3.5s ease-in-out infinite;
+    }
+
+    .app-card:nth-child(2) .app-icon { animation-delay: 0.5s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .app-card h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #1a1a2e;
+    }
+
+    .app-tag {
+      display: inline-block;
+      background: #eef2ff;
+      color: #4f46e5;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.25rem 0.8rem;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+    }
+
+    .app-card p {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .view-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: white;
+      padding: 0.7rem 1.6rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">Data<span>Huk</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="software.html" class="active">Software</a></li>
+      <li><a href="vision.html">Vision</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="policy.html">Policy</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <h1>Mobile Apps</h1>
+    <p>Ready-to-use Android & iOS applications by DataHuk Innovations</p>
+  </header>
+
+  <section class="page-section">
+    <div class="apps-grid">
+
+      <!-- GymOS Card -->
+      <a href="mobile-apps/gymos.html" class="app-card">
+        <div class="app-icon">🏋️</div>
+        <h3>GymOS</h3>
+        <span class="app-tag">Gym Management</span>
+        <p>Complete gym management app — memberships, attendance, payments, trainers & reports.</p>
+        <span class="view-btn">View Details →</span>
+      </a>
+
+      <!-- LMS Card -->
+      <a href="mobile-apps/lms.html" class="app-card">
+        <div class="app-icon">📚</div>
+        <h3>LMS</h3>
+        <span class="app-tag">Learning Management</span>
+        <p>Modern Learning Management System for courses, students, progress tracking & certificates.</p>
+        <span class="view-btn">View Details →</span>
+      </a>
+
+      <!-- You can add more apps later -->
+      <!--
+      <a href="mobile-apps/another-app.html" class="app-card">
+        ...
+      </a>
+      -->
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">Data<span>Huk</span></div>
+        <p>Innovate • Build • Transform</p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="software.html">Software</a>
+        <a href="contact.html">Contact</a>
+        <a href="policy.html">Policy</a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 DataHuk Innovations. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

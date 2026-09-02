@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GymOS | DataHuk Innovations</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css">
+
+  <style>
+    .product-hero {
+      max-width: 900px;
+      margin: 0 auto 3rem;
+      text-align: center;
+    }
+
+    .product-icon {
+      font-size: 5rem;
+      margin-bottom: 1rem;
+      animation: float 3.5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      max-width: 900px;
+      margin: 2.5rem auto;
+    }
+
+    .feature-item {
+      background: #f8f9ff;
+      border-radius: 14px;
+      padding: 1.4rem;
+      border: 1px solid #e0e7ff;
+    }
+
+    .feature-item h4 {
+      margin-bottom: 0.4rem;
+      color: #4338ca;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #6366f1;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .software-badge {
+      display: inline-block;
+      background: #eef2ff;
+      color: #4f46e5;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+    }
+
+    .download-note {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+
+    <a href="../index.html" class="logo">
+      Data<span>Huk</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../features.html">Features</a></li>
+      <li><a href="../services.html">Services</a></li>
+      <li><a href="../software.html" class="active">PC Software</a></li>
+      <li><a href="../vision.html">Vision</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../policy.html">Policy</a></li>
+    </ul>
+
+  </nav>
+
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <h1>GymOS</h1>
+    <p>Complete Gym Management PC Software</p>
+  </header>
+
+
+  <!-- Product Section -->
+  <section class="page-section">
+
+    <div class="product-hero">
+
+      <div class="product-icon">🏋️</div>
+
+      <span class="software-badge">
+        PC Software • Windows
+      </span>
+
+      <h2>GymOS</h2>
+
+      <p style="font-size:1.1rem; color:#555; max-width:600px; margin:1rem auto 2rem;">
+        Powerful and easy-to-use gym management software for Windows PCs.
+        Manage memberships, attendance, payments, trainers and detailed
+        reports from one simple application.
+      </p>
+
+
+      <!-- Download Button -->
+      <a
+        href="https://github.com/anantsinghpro12/datahukweb1.0/releases/download/v1.0.0/MyGymSoftware.Setup.By.Anant.Apps.Studio.zip"
+        class="btn btn-primary"
+        download
+      >
+        Download GymOS
+      </a>
+
+      <p class="download-note">
+        Windows PC • ZIP Package • Version 1.0.0
+      </p>
+
+    </div>
+
+
+    <!-- Features -->
+    <div class="feature-list">
+
+      <div class="feature-item">
+        <h4>Membership Management</h4>
+        <p>
+          Create, renew and track member plans easily.
+        </p>
+      </div>
+
+
+      <div class="feature-item">
+        <h4>Attendance Tracking</h4>
+        <p>
+          Quick check-in system with daily attendance reports.
+        </p>
+      </div>
+
+
+      <div class="feature-item">
+        <h4>Payments & Billing</h4>
+        <p>
+          Record payments and manage billing information easily.
+        </p>
+      </div>
+
+
+      <div class="feature-item">
+        <h4>Trainer Management</h4>
+        <p>
+          Assign trainers and manage trainer schedules.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+
+        <div class="logo">
+          Data<span>Huk</span>
+        </div>
+
+        <p>
+          Innovate • Build • Transform
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="../about.html">About</a>
+
+        <a href="../services.html">Services</a>
+
+        <a href="../software.html">PC Software</a>
+
+        <a href="../contact.html">Contact</a>
+
+        <a href="../policy.html">Policy</a>
+
+      </div>
+
+    </div>
+
+
+    <p class="copyright">
+      © 2026 DataHuk Innovations. All rights reserved.
+    </p>
+
+  </footer>
+
+
+  <script src="../script.js"></script>
+
+</body>
+</html>

@@ -6,9 +6,128 @@
   <title>About Us | DataHuk Innovations</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Extra animation styles for this page */
+    .about-intro {
+      max-width: 820px;
+      margin: 0 auto 4rem;
+      text-align: center;
+    }
+
+    .about-intro p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 1.4rem;
+    }
+
+    .services-showcase {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.8rem;
+      margin-top: 3rem;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 2rem 1.6rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      border: 1px solid #eee;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(168,85,247,0.08));
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 20px 40px rgba(99,102,241,0.15);
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    .service-icon {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+      animation: float 3.5s ease-in-out infinite;
+    }
+
+    .service-card:nth-child(2) .service-icon { animation-delay: 0.4s; }
+    .service-card:nth-child(3) .service-icon { animation-delay: 0.8s; }
+    .service-card:nth-child(4) .service-icon { animation-delay: 1.2s; }
+    .service-card:nth-child(5) .service-icon { animation-delay: 1.6s; }
+    .service-card:nth-child(6) .service-icon { animation-delay: 2.0s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .service-card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+      color: #1a1a2e;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .mission-vision {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 4.5rem;
+    }
+
+    @media (max-width: 700px) {
+      .mission-vision {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .info-box {
+      background: linear-gradient(135deg, #f8f9ff, #f0f4ff);
+      border-radius: 16px;
+      padding: 1.8rem;
+      border: 1px solid #e0e7ff;
+      transition: transform 0.3s ease;
+    }
+
+    .info-box:hover {
+      transform: translateY(-6px);
+    }
+
+    .info-box h4 {
+      font-size: 1.15rem;
+      margin-bottom: 0.7rem;
+      color: #4338ca;
+    }
+
+    .cta-row {
+      text-align: center;
+      margin-top: 3.5rem;
+    }
+  </style>
 </head>
 <body>
-
   <nav class="navbar">
     <a href="index.html" class="logo">Data<span>Huk</span></a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -28,43 +147,79 @@
 
   <header class="page-header">
     <h1>About Us</h1>
-    <p>Meet the founder and the mission driving DataHuk Innovations.</p>
+    <p>We build intelligent software that helps startups and businesses grow faster.</p>
   </header>
 
   <section class="page-section">
-    <div class="about-grid">
-<div class="about-image-card">
-  <div class="placeholder-img">
-    <img src="Founder Image.jpg" alt="Anant - Founder & CEO">
-    <span>Anant</span>
-    <small>Founder & CEO</small>
-  </div>
-</div>
+    <div class="about-intro">
+      <h3 class="label">WHO WE ARE</h3>
+      <h2 style="margin-bottom: 1.5rem;">We are DataHuk Innovations</h2>
+      
+      <p>
+        We design and deliver advanced technology solutions for startups and growing businesses. 
+        From intelligent automation to polished digital products, our focus is simple: 
+        build software that actually moves the needle.
+      </p>
+      
+      <p>
+        Whether you need AI agents that handle repetitive work, mobile apps with futuristic interfaces, 
+        secure cloud backends, or engaging 2D games — we turn ideas into reliable, production-ready systems.
+      </p>
+    </div>
 
-      <div class="about-text">
-        <h3 class="label">MEET THE FOUNDER</h3>
-        <h2>I'm Anant,<br>Founder & CEO,<br>DataHuk Innovations</h2>
-        <p>
-          Anant is a visionary tech leader driven by a passion for solving complex
-          business problems through innovation and technology.
-        </p>
-        <p>
-          His professional mission focuses on innovation, excellence, and empowering
-          businesses through intelligent software services.
-        </p>
-        <a href="services.html" class="btn btn-primary">Our Services</a>
-
-        <div class="info-boxes">
-          <div class="info-box">
-            <h4>Our Mission</h4>
-            <p>To provide world-class integrated software and technology services that empower businesses.</p>
-          </div>
-          <div class="info-box">
-            <h4>Our Vision</h4>
-            <p>To become a globally recognized technology and innovation company known for creativity.</p>
-          </div>
-        </div>
+    <!-- Interactive Services Showcase -->
+    <div class="services-showcase">
+      <div class="service-card">
+        <div class="service-icon">🧠</div>
+        <h3>AI Development</h3>
+        <p>AI agents, automation systems, and smart chatbot solutions that work around the clock.</p>
       </div>
+
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <h3>App Development</h3>
+        <p>Native Android & iOS apps with clean, futuristic interfaces and smooth performance.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🌐</div>
+        <h3>Web Platforms</h3>
+        <p>High-converting startup websites and full SaaS products built for scale.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🎮</div>
+        <h3>Game Development</h3>
+        <p>2D mobile games and multiplayer experiences that keep players coming back.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">☁️</div>
+        <h3>Cloud Backend</h3>
+        <p>Secure APIs, scalable architecture, and reliable cloud systems you can trust.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <h3>UI/UX Systems</h3>
+        <p>Premium futuristic interfaces with thoughtful motion and polished interactions.</p>
+      </div>
+    </div>
+
+    <!-- Mission & Vision -->
+    <div class="mission-vision">
+      <div class="info-box">
+        <h4>Our Mission</h4>
+        <p>To provide world-class integrated software and technology services that empower businesses to innovate and scale with confidence.</p>
+      </div>
+      <div class="info-box">
+        <h4>Our Vision</h4>
+        <p>To become a globally recognized technology and innovation company known for creativity, reliability, and real impact.</p>
+      </div>
+    </div>
+
+    <div class="cta-row">
+      <a href="services.html" class="btn btn-primary">Explore Our Services</a>
     </div>
   </section>
 

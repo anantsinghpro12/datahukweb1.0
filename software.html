@@ -6,9 +6,120 @@
   <title>Software | DataHuk Innovations</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .software-hub {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 1rem 1rem 4rem;
+    }
+
+    .hub-intro {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .hub-intro p {
+      font-size: 1.15rem;
+      color: #555;
+      max-width: 620px;
+      margin: 0.8rem auto 0;
+      line-height: 1.7;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.2rem;
+    }
+
+    @media (max-width: 700px) {
+      .category-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .category-card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 3rem 2rem;
+      text-align: center;
+      border: 1px solid #eee;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      overflow: hidden;
+      display: block;
+    }
+
+    .category-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(99,102,241,0.07), rgba(168,85,247,0.07));
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .category-card:hover {
+      transform: translateY(-14px) scale(1.03);
+      box-shadow: 0 25px 50px rgba(99,102,241,0.18);
+    }
+
+    .category-card:hover::before {
+      opacity: 1;
+    }
+
+    .category-icon {
+      font-size: 3.8rem;
+      margin-bottom: 1.4rem;
+      display: inline-block;
+      animation: float 3.8s ease-in-out infinite;
+    }
+
+    .category-card:nth-child(2) .category-icon {
+      animation-delay: 0.6s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .category-card h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+      color: #1a1a2e;
+    }
+
+    .category-card p {
+      font-size: 1rem;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1.8rem;
+    }
+
+    .category-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: white;
+      padding: 0.85rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .category-card:hover .category-btn {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(99,102,241,0.35);
+    }
+  </style>
 </head>
 <body>
-
   <nav class="navbar">
     <a href="index.html" class="logo">Data<span>Huk</span></a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -28,45 +139,33 @@
 
   <header class="page-header">
     <h1>Our Software</h1>
-    <p>Ready-to-use products developed by Anant Apps Studio.</p>
+    <p>Ready-to-use products built by DataHuk Innovations</p>
   </header>
 
   <section class="page-section">
-    <div class="software-grid">
+    <div class="software-hub">
+      <div class="hub-intro">
+        <h3 class="label">CHOOSE A CATEGORY</h3>
+        <p>Select the type of software you need. We build both mobile applications and desktop solutions.</p>
+      </div>
 
-      <!-- GYM SOFTWARE CARD -->
-      <div class="software-card">
-        <div class="software-icon-box">
-          <span class="soft-emoji">🏋️</span>
-        </div>
-        <h3>MyGymSoftware</h3>
-        <p class="soft-tag">Developed by Anant Apps Studio</p>
-        <p class="soft-desc">
-          Complete gym management solution — memberships, attendance,
-          payments, trainers & reports. Ready to install.
-        </p>
-        <a
-          href="https://github.com/anantsinghpro12/datahukweb1.0/releases/download/v1.0.0/MyGymSoftware.Setup.By.Anant.Apps.Studio.zip"
-          download
-          class="btn btn-download"
-        >
-          ⬇ Download MyGymSoftware
+      <div class="category-grid">
+        <!-- Mobile Apps Card -->
+        <a href="mobile-apps.html" class="category-card">
+          <div class="category-icon">📱</div>
+          <h2>Mobile Apps</h2>
+          <p>Android & iOS applications including GymOS, LMS and more ready-to-use products.</p>
+          <span class="category-btn">Explore Mobile Apps →</span>
+        </a>
+
+        <!-- PC Softwares Card -->
+        <a href="pc-softwares.html" class="category-card">
+          <div class="category-icon">💻</div>
+          <h2>PC Softwares</h2>
+          <p>Desktop applications and management tools ready to download and install.</p>
+          <span class="category-btn">Explore PC Softwares →</span>
         </a>
       </div>
-
-      <!-- PLACEHOLDER FOR MORE SOFTWARE -->
-      <div class="software-card coming-soon">
-        <div class="software-icon-box muted">
-          <span class="soft-emoji">📦</span>
-        </div>
-        <h3>More Products</h3>
-        <p class="soft-tag">Coming Soon</p>
-        <p class="soft-desc">
-          New tools and software from DataHuk Innovations will appear here.
-        </p>
-        <span class="btn btn-disabled">Coming Soon</span>
-      </div>
-
     </div>
   </section>
 
